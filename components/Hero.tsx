@@ -8,7 +8,7 @@ import { BlackButton } from "./BlackButton";
 
 export const Hero = () => {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-28 md:pt-36 lg:pt-48">
+        <section className="relative w-full h-auto pb-20 md:pb-10 lg:pb-40 overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-28 md:pt-36 lg:pt-48">
 
             {/* Background Gradients - Split Left (Warm) / Right (Blue) - Behind Cards */}
             <div className="absolute top-[8vh] sm:top-[10vh] md:top-[8vh] lg:top-[6vh] left-1/2 -translate-x-1/2 pointer-events-none z-0">
@@ -23,8 +23,7 @@ export const Hero = () => {
                 </div>
             </div>
 
-            {/* Grid Lines Overlay - Centered/Padding Style */}
-            <div className="absolute inset-0 max-w-6xl mx-auto border-l border-r border-gray-100 pointer-events-none z-0 opacity-100" />
+
 
             {/* Clouds Animation Layer - Split Container to Clip at Center */}
             <div className="absolute top-[10vh] sm:top-[12vh] md:top-[10vh] lg:top-[8vh] left-1/2 -translate-x-1/2 w-[600px] sm:w-[700px] md:w-[800px] h-[350px] sm:h-[400px] md:h-[450px] z-0 pointer-events-none flex">

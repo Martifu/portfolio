@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit, Playfair_Display, Dancing_Script, Cormorant_Garamond, Caveat } from "next/font/google";
 import "./globals.css";
 
@@ -17,6 +17,10 @@ const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: 
 export const metadata: Metadata = {
   title: "Martin Esparza - Portfolio",
   description: "Mobile & Web Developer | Automation Enthusiast",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
