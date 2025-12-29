@@ -7,7 +7,7 @@ import { BlackButton } from "./BlackButton";
 
 export const Navbar = () => {
     return (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <div className="fixed bottom-[calc(2rem+env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 z-50">
             <div className="flex items-center gap-2 px-2 py-2 bg-white/80 backdrop-blur-xl border border-white/40 rounded-full shadow-2xl">
 
                 {/* Avatar Section */}

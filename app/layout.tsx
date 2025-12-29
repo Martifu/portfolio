@@ -17,6 +17,10 @@ const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: 
 export const metadata: Metadata = {
   title: "Martin Esparza - Portfolio",
   description: "Mobile & Web Developer | Automation Enthusiast",
+  appleWebApp: {
+    statusBarStyle: "default",
+    title: "Martin Esparza",
+  },
 };
 
 export const viewport: Viewport = {

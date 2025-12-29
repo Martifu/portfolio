@@ -26,7 +26,7 @@ export const Testimonials = () => {
                     viewport={{ once: true }}
                     className="font-caveat text-2xl md:text-3xl text-gray-800 mb-2 relative z-20"
                 >
-                    Trusted by Clients 999
+                    Confían en mí
                 </motion.span>
 
                 {/* Main Headline Group */}
@@ -74,7 +74,7 @@ export const Testimonials = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <span className="font-serif text-2xl md:text-4xl text-gray-900 tracking-tight whitespace-nowrap">Their Words</span>
+                            <span className="font-serif text-2xl md:text-4xl text-gray-900 tracking-tight whitespace-nowrap">Sus Palabras</span>
                         </motion.div>
                     </div>
 
@@ -86,7 +86,7 @@ export const Testimonials = () => {
                         transition={{ delay: 0.1 }}
                         className="font-serif text-5xl md:text-6xl text-gray-900 tracking-tight mt-1 relative z-20"
                     >
-                        Not Mine
+                        No las Mías
                     </motion.h2>
                 </div>
             </div>
@@ -96,7 +96,7 @@ export const Testimonials = () => {
 
                 {/* Card 1 - Blue Sky (Right Blue from Hero) */}
                 <TestimonialCard
-                    quote="I had the pleasure of working with Martin on a recent UI/UX design project, and his work exceeded my expectations. He executed the design with precision, creativity, and attention to detail. Martin was able to understand the..."
+                    quote="Tuve el placer de trabajar con Martin en un proyecto reciente de diseño UI/UX, y su trabajo superó mis expectativas. Ejecutó el diseño con precisión, creatividad y atención al detalle. Martin fue capaz de entender..."
                     name="Denver Lopes"
                     title="Founder Frogit"
                     image="/assets/person.png"
@@ -108,7 +108,7 @@ export const Testimonials = () => {
 
                 {/* Card 2 - Warm Sky (Left Warm from Hero) */}
                 <TestimonialCard
-                    quote="Working with Martin was honestly a breeze. The guy can work magic under pressure—we threw him a crazy 24-hour deadline project and he nailed it perfectly, even with us being in completely different time zones..."
+                    quote="Trabajar con Martin fue honestamente muy fácil. El tipo puede hacer magia bajo presión: le lanzamos un proyecto con un plazo loco de 24 horas y lo clavó perfectamente, incluso estando en zonas horarias completamente diferentes..."
                     name="Angela Wu"
                     title="Founder Komo AI"
                     image="/assets/person.png"
@@ -128,7 +128,7 @@ export const Testimonials = () => {
                 className="relative z-20"
             >
                 <BlackButton className="px-8 py-3 rounded-full text-white bg-gray-900 shadow-xl hover:scale-105 transition-transform">
-                    Read More
+                    Leer Más
                 </BlackButton>
             </motion.div>
 
