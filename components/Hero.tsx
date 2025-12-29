@@ -136,11 +136,11 @@ export const Hero = () => {
                     {/* Project Cards (Behind) - Fanned out */}
                     <div className="absolute top-[140px] sm:top-[100px] md:top-[-20px] lg:top-[-40px] xl:top-[-80px] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0 flex justify-center items-start scale-[0.6] sm:scale-[0.7] md:scale-80 lg:scale-90 xl:scale-100 origin-top">
                         {[
-                            { title: "SaaS Móvil", x: -140, y: 40, rotate: -20, delay: 0.6, z: 0 },
-                            { title: "Asistente IA", x: -100, y: 0, rotate: -12, delay: 0.4, z: 10 },
+                            { title: "Reda CRM", x: -140, y: 40, rotate: -20, delay: 0.6, z: 0 },
+                            { title: "Gebesa Desk Controller", x: -100, y: 0, rotate: -12, delay: 0.4, z: 10 },
                             { title: "Nexus GPT", x: 0, y: -20, rotate: 0, delay: 0.2, z: 20, isCenter: true },
-                            { title: "Agencia IA", x: 100, y: 0, rotate: 12, delay: 0.4, z: 10 },
-                            { title: "Dashboard SaaS", x: 140, y: 40, rotate: 20, delay: 0.6, z: 0 },
+                            { title: "Automatizaciones IA", x: 100, y: 0, rotate: 12, delay: 0.4, z: 10 },
+                            { title: "N8N Flows", x: 140, y: 40, rotate: 20, delay: 0.6, z: 0 },
                         ].map((card, index) => (
                             <motion.div
                                 key={index}
