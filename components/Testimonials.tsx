@@ -74,7 +74,7 @@ export const Testimonials = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <span className="font-garamond text3xl md:text-5xl text-gray-900 whitespace-nowrap">Sus Palabras</span>
+                            <span className="font-garamond text-4xl md:text-5xl text-gray-900 whitespace-nowrap">Sus Palabras</span>
                         </motion.div>
                     </div>
 
