@@ -122,11 +122,11 @@ export const Hero = () => {
                     {/* Project Cards (Behind) - Fanned out */}
                     <div className="absolute top-[70px] sm:top-[80px] md:top-[40px] lg:top-[-40px] xl:top-[-80px] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0 flex justify-center items-start scale-[0.6] sm:scale-[0.7] md:scale-80 lg:scale-90 xl:scale-100 origin-top">
                         {[
-                            { title: "Reda CRM", x: -160, y: 70, rotate: -20, delay: 0.6, z: 0, opacity: 0.5 },
-                            { title: "Gebesa Desk Controller", x: -120, y: 25, rotate: -8, delay: 0.4, z: 10, opacity: 0.8 },
-                            { title: "Nexus GPT", x: 0, y: -5, rotate: 0, delay: 0.2, z: 20, isCenter: true, opacity: 1 },
-                            { title: "Automatizaciones IA", x: 160, y: 25, rotate: 8, delay: 0.4, z: 10, opacity: 0.8 },
-                            { title: "N8N Flows", x: 190, y: 70, rotate: 20, delay: 0.6, z: 0, opacity: 0.5 },
+                            { title: "Simpatía CRM", x: -160, y: 70, rotate: -20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/simpatia.png" },
+                            { title: "Gebesa Desk App", x: -120, y: 25, rotate: -8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/gebesa-card.png" },
+                            { title: "Reda CRM", x: 0, y: -5, rotate: 0, delay: 0.2, z: 20, isCenter: true, opacity: 1, image: "/assets/reda-crm.png" },
+                            { title: "Aplicación Móvil Reda", x: 160, y: 25, rotate: 8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/ai-card.png" },
+                            { title: "Agentes IA", x: 190, y: 70, rotate: 20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/n8n.png" },
                         ].map((card, index) => (
                             <motion.div
                                 key={index}
@@ -139,10 +139,10 @@ export const Hero = () => {
                                 {/* Card Image Area - Removed explicit image for center card to match request */}
                                 <div className="relative border border-gray-200 w-full h-56 bg-white rounded-[10px] overflow-hidden shadow-inner mb-1 group-hover:scale-[1.02] transition-transform">
                                     <Image
-                                        src="/assets/card-image.png"
+                                        src={card.image || "/assets/card-image.png"}
                                         alt={card.title}
                                         fill
-                                        className="opacity-90"
+                                        className="opacity-90 object-cover"
                                     />
                                 </div>
 
