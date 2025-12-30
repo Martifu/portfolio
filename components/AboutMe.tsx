@@ -143,10 +143,10 @@ export const AboutMe = () => {
                 className="max-w-2xl px-6 text-center space-y-6 relative z-10 font-sans"
             >
                 <p className="text-gray-600 text-lg leading-relaxed">
-                    I'm Martin, a UI/UX Designer specializing in clean, intuitive UI for websites and digital products. With 3 years of experience, I help brands turn ideas into interfaces that actually work guiding users seamlessly, creating flow, and boosting conversion.
+                    Soy Martin, un desarrollador Web y Móvil especializado en crear aplicaciones limpias e intuitivas con Flutter. Con 3 años de experiencia, ayudo a las marcas a convertir ideas en interfaces que realmente funcionan: guiando a los usuarios, creando fluidez y mejorando la conversión.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                    For me, good design is like a good host: it makes people feel welcomed, clear about where to go, and happy to stay longer.
+                    Para mí, el buen desarrollo es como un buen anfitrión: hace que las personas se sientan bienvenidas, sepan a dónde ir y quieran quedarse más tiempo.
                 </p>
 
                 {/* Divider Diamonds */}
@@ -156,9 +156,9 @@ export const AboutMe = () => {
 
                 {/* Mission */}
                 <div className="space-y-4">
-                    <span className="font-caveat text-xl text-gray-500 block">My Mission?</span>
-                    <p className="text-gray-600 text-xl leading-relaxed">
-                        My mission is to help brands build digital experiences that go beyond "pretty" making them intuitive, engaging, and truly impactful.
+                    <span className="font-caveat text-xl text-gray-500 block">¿Mi Misión?</span>
+                    <p className="text-gray-800 text-xl font-medium leading-relaxed">
+                        Mi misión es ayudar a las marcas a construir experiencias digitales que van más allá de lo "bonito": haciéndolas intuitivas, atractivas y verdaderamente impactantes.
                     </p>
                 </div>
             </motion.div>
