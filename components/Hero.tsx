@@ -8,10 +8,10 @@ import { BlackButton } from "./BlackButton";
 
 export const Hero = () => {
     return (
-        <section className="relative w-full h-auto pb-20 md:pb-10 lg:pb-40 overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-28 md:pt-36 lg:pt-48">
+        <section className="relative w-full h-auto pb-20 md:pb-10 lg:pb-40 overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-16 md:pt-24 lg:pt-48">
 
             {/* Background Gradients - Split Left (Warm) / Right (Blue) - Behind Cards */}
-            <div className="absolute top-[8vh] sm:top-[10vh] md:top-[8vh] lg:top-[6vh] left-1/2 -translate-x-1/2 pointer-events-none z-0">
+            <div className="absolute top-[-5%] sm:top-[2%] md:top-[5%] lg:top-[-2%] xl:top-[-4%] left-1/2 -translate-x-1/2 pointer-events-none z-0">
                 <div className="relative w-[500px] sm:w-[600px] md:w-[700px] h-[350px] sm:h-[400px] md:h-[450px]">
                     {/* Left Warm Glow - Concentrated */}
                     <div className="absolute top-0 left-0 w-1/2 h-full opacity-100 blur-3xl"
@@ -26,7 +26,7 @@ export const Hero = () => {
 
 
             {/* Clouds Animation Layer - Split Container to Clip at Center */}
-            <div className="absolute top-[10vh] sm:top-[12vh] md:top-[10vh] lg:top-[8vh] left-1/2 -translate-x-1/2 w-[600px] sm:w-[700px] md:w-[800px] h-[350px] sm:h-[400px] md:h-[450px] z-0 pointer-events-none flex">
+            <div className="absolute top-[0%] sm:top-[4%] md:top-[8%] lg:top-[0%] left-1/2 -translate-x-1/2 w-[600px] sm:w-[700px] md:w-[800px] h-[350px] sm:h-[400px] md:h-[450px] z-0 pointer-events-none flex">
 
                 {/* Left Side Container - Clips content at right edge (center of screen) */}
                 <div className="w-1/2 h-full overflow-hidden relative">
@@ -115,54 +115,40 @@ export const Hero = () => {
                 </div> */}
 
                 {/* Person & Cards Group */}
-                <div className="relative w-full max-w-[500px] h-[580px] mb-2 flex justify-center items-end opacity-100">
+                <div className="relative w-full max-w-[500px] h-[490px] sm:h-[550px] md:h-[550px] lg:h-[600px] xl:h-[620px] mb-2 flex justify-center items-end opacity-100">
 
-                    {/* Animated Clouds behind Cards - Reduced Size */}
-                    <div className="absolute top-8 sm:top-10 md:top-12 left-1/2 -translate-x-1/2 w-[350px] sm:w-[380px] md:w-[400px] h-[350px] sm:h-[380px] md:h-[400px] -z-10 opacity-70 pointer-events-none">
-                        <motion.div
-                            animate={{ x: [-30, 30, -30] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute inset-0"
-                        >
-                            <Image
-                                src="/assets/clouds.avif"
-                                alt="Clouds Behind"
-                                fill
-                                className="object-contain"
-                            />
-                        </motion.div>
-                    </div>
+
 
                     {/* Project Cards (Behind) - Fanned out */}
-                    <div className="absolute top-[140px] sm:top-[100px] md:top-[-20px] lg:top-[-40px] xl:top-[-80px] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0 flex justify-center items-start scale-[0.6] sm:scale-[0.7] md:scale-80 lg:scale-90 xl:scale-100 origin-top">
+                    <div className="absolute top-[70px] sm:top-[80px] md:top-[40px] lg:top-[-40px] xl:top-[-80px] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0 flex justify-center items-start scale-[0.6] sm:scale-[0.7] md:scale-80 lg:scale-90 xl:scale-100 origin-top">
                         {[
-                            { title: "Reda CRM", x: -140, y: 40, rotate: -20, delay: 0.6, z: 0 },
-                            { title: "Gebesa Desk Controller", x: -100, y: 0, rotate: -12, delay: 0.4, z: 10 },
-                            { title: "Nexus GPT", x: 0, y: -20, rotate: 0, delay: 0.2, z: 20, isCenter: true },
-                            { title: "Automatizaciones IA", x: 100, y: 0, rotate: 12, delay: 0.4, z: 10 },
-                            { title: "N8N Flows", x: 140, y: 40, rotate: 20, delay: 0.6, z: 0 },
+                            { title: "Reda CRM", x: -160, y: 70, rotate: -20, delay: 0.6, z: 0, opacity: 0.5 },
+                            { title: "Gebesa Desk Controller", x: -120, y: 25, rotate: -8, delay: 0.4, z: 10, opacity: 0.8 },
+                            { title: "Nexus GPT", x: 0, y: -5, rotate: 0, delay: 0.2, z: 20, isCenter: true, opacity: 1 },
+                            { title: "Automatizaciones IA", x: 160, y: 25, rotate: 8, delay: 0.4, z: 10, opacity: 0.8 },
+                            { title: "N8N Flows", x: 190, y: 70, rotate: 20, delay: 0.6, z: 0, opacity: 0.5 },
                         ].map((card, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ x: 0, y: 100, rotate: 0, opacity: 0 }}
-                                animate={{ x: card.x, y: card.y, rotate: card.rotate, opacity: .5 }}
+                                animate={{ x: card.x, y: card.y, rotate: card.rotate, opacity: card.opacity }}
                                 transition={{ delay: card.delay, duration: 0.8, type: "spring" }}
                                 style={{ zIndex: card.z }}
-                                className={`absolute top-0 w-50 h-50 bg-gradient-to-b from-white/10 via-white/60 to-white shadow-lg rounded-[15px] border border-white/40 p-1 backdrop-blur-[2px] flex flex-col origin-bottom ${card.isCenter ? 'scale-110' : 'scale-100 opacity-80'}`}
+                                className={`absolute top-0 w-55 h-55 bg-gradient-to-b from-white/10 via-white/60 to-white shadow-lg rounded-[15px] border border-gray-200 p-1 backdrop-blur-[2px] flex flex-col origin-bottom ${card.isCenter ? 'scale-110' : 'scale-100'}`}
                             >
                                 {/* Card Image Area - Removed explicit image for center card to match request */}
-                                <div className="relative w-full h-56 bg-white rounded-sm rounded-[15px] overflow-hidden shadow-inner mb-1 group-hover:scale-[1.02] transition-transform">
+                                <div className="relative border border-gray-200 w-full h-56 bg-white rounded-[10px] overflow-hidden shadow-inner mb-1 group-hover:scale-[1.02] transition-transform">
                                     <Image
                                         src="/assets/card-image.png"
                                         alt={card.title}
                                         fill
-                                        className="object-cover opacity-90"
+                                        className="opacity-90"
                                     />
                                 </div>
 
                                 {/* Card Title - Times New Roman style (serif), distinct and small */}
-                                <div className="px-2 mt-auto pb-1">
-                                    <h3 className="font-serif text-sm text-gray-900 tracking-tight text-left leading-tight">
+                                <div className="px-2 mt-auto pb-2 pt-2">
+                                    <h3 className="font-serif text-md text-gray-900 tracking-tight text-left leading-tight">
                                         {card.title}
                                     </h3>
                                 </div>
@@ -170,9 +156,25 @@ export const Hero = () => {
                         ))}
                     </div>
 
+                    {/* Animated Clouds IN FRONT of Cards */}
+                    <div className="absolute top-[-20px] sm:top-0 md:top-5 left-1/2 -translate-x-1/2 w-[350px] sm:w-[380px] md:w-[400px] h-[350px] sm:h-[380px] md:h-[400px] z-25 opacity-70 pointer-events-none">
+                        <motion.div
+                            animate={{ x: [-30, 30, -30] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Image
+                                src="/assets/clouds.avif"
+                                alt="Clouds Front"
+                                fill
+                                className="object-contain"
+                            />
+                        </motion.div>
+                    </div>
+
                     {/* Person Image - Raised Position & Closer to Text */}
                     <motion.div
-                        className="relative w-[300px] h-[360px] sm:w-[320px] sm:h-[400px] md:w-[360px] md:h-[460px] lg:w-[420px] lg:h-[540px] xl:w-[500px] xl:h-[620px] z-30 origin-bottom translate-y-[-20px] sm:translate-y-[-10px] md:translate-y-[-5px] opacity-90 [mask-image:linear-gradient(to_bottom,black_40%,transparent_95%)]"
+                        className="relative w-[280px] h-[330px] sm:w-[300px] sm:h-[370px] md:w-[340px] md:h-[430px] lg:w-[400px] lg:h-[510px] xl:w-[460px] xl:h-[580px] z-30 origin-bottom translate-y-[-20px] sm:translate-y-[-10px] md:translate-y-[-5px] opacity-90 [mask-image:linear-gradient(to_bottom,black_40%,transparent_95%)]"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     >
@@ -190,36 +192,36 @@ export const Hero = () => {
                 </div>
 
                 {/* Headline - Negative margin to pull it closer to image */}
-                <motion.div className="-mt-[135px] sm:-mt-[110px] md:-mt-[130px] lg:-mt-[135px] xl:-mt-[140px] relative z-30">
+                <motion.div className="-mt-[125px] sm:-mt-[80px] md:-mt-[130px] lg:-mt-[125px] xl:-mt-[125px] relative z-30">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
-                        className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[0.90] text-gray-900 font-serif flex flex-col items-center"
+                        className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.90] text-gray-900 font-serif flex flex-col items-center"
                     >
                         <span className="flex items-center gap-3 sm:gap-4">
-                            <span className="italic font-light tracking-tight font-serif">Desarrollando</span>
+                            <span className="font-light tracking-tight font-serif mr-[-5px]">Desarrollando</span>
 
                             {/* Interface Badge Pill - Scales down on mobile */}
-                            <span className="inline-flex items-center gap-2 sm:gap-2.5 md:gap-3 bg-gradient-to-b from-[#E8F0FE] via-[#F5F9FF] to-white/95 border border-white/80 rounded-[35px] px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-5 md:py-2 lg:px-6 lg:py-3 shadow-[0_4px_24px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] backdrop-blur-xl relative">
-                                {/* Subtle inner shadow */}
-                                <div className="absolute inset-0 rounded-[35px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]" />
+                            <span className="inline-flex items-center gap-[0.08em] bg-gradient-to-b from-[#F2F6FF] to-[#FFFFFF] border border-gray-500/20 rounded-[0.3em] px-[0.15em] py-[0.05em] shadow-[0_10px_40px_rgba(0,0,0,0.05)] backdrop-blur-xl relative -rotate-3 transform hover:rotate-0 transition-transform duration-300">
+                                {/* Subtle inner shadow - lighter */}
+                                <div className="absolute inset-0 rounded-[0.3em] shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]" />
 
-                                {/* Icon */}
-                                <div className="relative w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-11 lg:w-10 lg:h-14 rounded-[35px] overflow-hidden shadow-lg">
+                                {/* Icon - Rounded Rectangle, No Circle Container */}
+                                <div className="relative w-[0.55em] h-[0.7em] overflow-hidden">
                                     <Image
                                         src="/assets/interface-icon.png"
                                         alt="Interface Icon"
                                         fill
-                                        className="object-cover"
+                                        className="object-contain"
                                         priority
                                     />
                                 </div>
 
-                                {/* Text */}
-                                <span className="font-serif text-[0.7rem] sm:text-[0.63rem] md:text-[0.64em] lg:text-[0.65em] tracking-tight text-gray-900 relative z-10">Software</span>
+                                {/* Text - Tighter leading */}
+                                <span className="font-serif text-[0.9em] tracking-tight text-gray-900 relative z-10 leading-none">Software</span>
                             </span>
                         </span>
 
-                        <span className="mt-1 tracking-tight font-serif">Que Impacta</span>
+                        <span className="mt-[-5px] tracking-tight font-serif">Que Impacta</span>
                     </motion.h1>
                 </motion.div>
 
@@ -237,9 +239,9 @@ export const Hero = () => {
                     className="mt-8 sm:mt-5 md:mt-6 flex flex-row items-center justify-center gap-3 sm:gap-3 w-full px-1"
                 >
                     <div className="flex-shrink-0 w-auto">
-                        <BlackButton className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm md:text-base">Trabajemos Juntos</BlackButton>
+                        <BlackButton className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm md:text-base cursor-pointer">Trabajemos Juntos</BlackButton>
                     </div>
-                    <button className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0">
+                    <button className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
                         <BriefcaseIcon /> Agendar Llamada
                     </button>
                 </motion.div>

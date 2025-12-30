@@ -36,7 +36,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* Contact Button */}
-                <BlackButton className="ml-2 px-5 py-2.5">
+                <BlackButton className="ml-2 px-5 py-2.5 cursor-pointer">
                     Contacto
                 </BlackButton>
 

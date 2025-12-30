@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Playfair_Display, Dancing_Script, Cormorant_Garamond, Caveat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: "swap" });
@@ -13,6 +14,12 @@ const cormorant = Cormorant_Garamond({
   display: "swap"
 });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
+
+const garamond = localFont({
+  src: "../public/assets/fonts/garamondnovacondl-regular.ttf",
+  variable: "--font-garamond",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Martin Esparza - Portfolio",
@@ -34,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${outfit.variable} ${playfair.variable} ${dancing.variable} ${cormorant.variable} ${caveat.variable} font-sans`}>{children}</body>
+      <body className={`${outfit.variable} ${playfair.variable} ${dancing.variable} ${cormorant.variable} ${caveat.variable} ${garamond.variable} font-sans`}>{children}</body>
     </html>
   );
 }

@@ -5,6 +5,7 @@
   --font-serif: var(--font-cormorant);
   --font-script: var(--font-dancing);
   --font-caveat: var(--font-caveat);
+  --font-garamond: var(--font-garamond);
 }
 
 :root {
@@ -19,6 +20,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-garamond);
 }
 
 @layer utilities {

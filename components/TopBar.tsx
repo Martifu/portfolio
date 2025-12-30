@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { BlackButton } from "./BlackButton";
 
 export const TopBar = () => {
     const [time, setTime] = useState("");

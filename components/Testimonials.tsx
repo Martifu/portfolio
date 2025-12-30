@@ -11,7 +11,7 @@ export const Testimonials = () => {
         <section className="relative w-full pt-4 lg:pt-12 pb-32 flex flex-col items-center overflow-hidden bg-white">
 
             {/* Background Warm Glow - Centered behind "Their Words" */}
-            <div className="absolute top-[100px] left-1/2 -translate-x-1/2 w-full max-w-lg h-[400px] pointer-events-none z-0">
+            <div className="absolute top-[90px] left-1/2 -translate-x-1/2 w-full max-w-lg h-[400px] pointer-events-none z-0">
                 <div className="w-full h-full opacity-100 blur-3xl"
                     style={{ background: 'radial-gradient(circle, rgba(255,220,200, 1) 0%, rgba(255,240,230,0.9) 60%, transparent 80%)' }} />
             </div>
@@ -33,7 +33,7 @@ export const Testimonials = () => {
                 <div className="flex flex-col items-center relative">
 
                     {/* Animated Clouds - Strictly Behind Text & Positioned Below/Around "Not Mine" */}
-                    <div className="absolute top-[75%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[300px] pointer-events-none z-0 opacity-100">
+                    <div className="absolute top-[75%] left-1/2 -translate-x-20 -translate-y-1/2 w-[120%] h-[300px] pointer-events-none z-0 opacity-100">
                         {/* Seamless Loop Container */}
                         <div className="w-full h-full overflow-hidden relative">
                             <motion.div
@@ -53,7 +53,7 @@ export const Testimonials = () => {
                     </div>
 
                     {/* Badge + Text Row */}
-                    <div className="flex items-center gap-3 md:gap-4 relative z-20">
+                    <div className="flex items-center gap-3 md:gap-2 relative z-20">
                         {/* Badge */}
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -127,9 +127,7 @@ export const Testimonials = () => {
                 viewport={{ once: true }}
                 className="relative z-20"
             >
-                <BlackButton className="px-8 py-3 rounded-full text-white bg-gray-900 shadow-xl hover:scale-105 transition-transform">
-                    Leer Más
-                </BlackButton>
+                <BlackButton>Leer más</BlackButton>
             </motion.div>
 
         </section>
