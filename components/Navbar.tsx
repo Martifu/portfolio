@@ -11,12 +11,12 @@ export const Navbar = () => {
             <div className="flex items-center gap-2 px-2 py-2 bg-white/80 backdrop-blur-xl border border-white/40 rounded-full shadow-2xl">
 
                 {/* Avatar Section */}
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 radial-gradient from-white to-gray-200 cursor-pointer ">
                     <Image
                         src="/assets/person.png" // Using person image as avatar for now
                         alt="Avatar"
                         fill
-                        className="object-cover"
+                        className="object-cover translate-y-1 opacity-90"
                     />
                 </div>
 

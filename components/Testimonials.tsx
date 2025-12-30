@@ -74,7 +74,7 @@ export const Testimonials = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <span className="font-serif text-2xl md:text-4xl text-gray-900 tracking-tight whitespace-nowrap">Sus Palabras</span>
+                            <span className="font-garamond text3xl md:text-5xl text-gray-900 whitespace-nowrap">Sus Palabras</span>
                         </motion.div>
                     </div>
 
@@ -84,7 +84,7 @@ export const Testimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="font-serif text-5xl md:text-6xl text-gray-900 tracking-tight mt-1 relative z-20"
+                        className="font-outfit text-5xl md:text-6xl text-gray-900 tracking-tight mt-1 relative z-20"
                     >
                         No las Mías
                     </motion.h2>

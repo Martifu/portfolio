@@ -22,11 +22,16 @@ const garamond = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Martin Esparza - Portfolio",
-  description: "Mobile & Web Developer | Automation Enthusiast",
+  title: "Martin Esparza - Portafolio",
+  description: "Desarrollador web y móvil | Entusiasta de la automatización",
   appleWebApp: {
     statusBarStyle: "default",
     title: "Martin Esparza",
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 

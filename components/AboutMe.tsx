@@ -157,7 +157,7 @@ export const AboutMe = () => {
                 {/* Mission */}
                 <div className="space-y-4">
                     <span className="font-caveat text-xl text-gray-500 block">¿Mi Misión?</span>
-                    <p className="text-gray-800 text-xl font-medium leading-relaxed">
+                    <p className="text-gray-600 text-xl font-normal leading-relaxed">
                         Mi misión es ayudar a las marcas a construir experiencias digitales que van más allá de lo "bonito": haciéndolas intuitivas, atractivas y verdaderamente impactantes.
                     </p>
                 </div>
