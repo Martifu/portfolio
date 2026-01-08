@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
   images: {
 
     unoptimized: true,
-    domains: ["framerusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'framerusercontent.com',
+      },
+    ],
   },
 };
 

@@ -35,4 +35,12 @@ h6 {
   .text-balance {
     text-wrap: balance;
   }
+
+  .font-caveat {
+    font-family: var(--font-caveat), cursive !important;
+  }
+
+  .font-garamond {
+    font-family: var(--font-garamond), serif;
+  }
 }

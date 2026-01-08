@@ -127,7 +127,7 @@ export const Testimonials = () => {
                 viewport={{ once: true }}
                 className="relative z-20"
             >
-                <BlackButton>Leer más</BlackButton>
+                <BlackButton className="px-6 py-3">Leer más</BlackButton>
             </motion.div>
 
         </section>
