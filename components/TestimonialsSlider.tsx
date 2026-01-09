@@ -84,31 +84,31 @@ export const TestimonialsSlider = () => {
     const currentTestimonial = TESTIMONIALS[currentIndex];
 
     return (
-        <section className="relative w-full py-20 lg:py-32 flex flex-col items-center overflow-hidden bg-white min-h-[800px] justify-center">
+        <section id="testimonials-slider" className="relative w-full py-16 lg:py-24 flex flex-col items-center overflow-hidden bg-white min-h-[700px] justify-center">
 
             {/* --- Background Elements --- */}
 
-            {/* Bottom-Left Warm Gradient & Clouds */}
-            <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] pointer-events-none z-0">
-                <div className="absolute inset-0 opacity-40 blur-[80px]"
+            {/* Bottom-Left Warm Gradient & Clouds - Centered */}
+            <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-full max-w-5xl pointer-events-none z-0">
+                <div className="absolute bottom-[-50px] left-[-50px] w-[500px] h-[500px] blur-[80px]"
                     style={{ background: 'radial-gradient(circle, rgba(255,200,160, 0.8) 0%, rgba(255,240,230,0) 70%)' }} />
                 <motion.div
                     animate={{ x: [0, 20, 0], y: [0, -10, 0] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-20 left-10 w-[400px] h-[300px] opacity-60"
+                    className="absolute bottom-0 left-10 w-[350px] h-[250px] opacity-60"
                 >
                     <Image src="/assets/clouds.avif" alt="Clouds Left" fill className="object-contain opacity-80" />
                 </motion.div>
             </div>
 
-            {/* Top-Right Blue Gradient & Clouds */}
-            <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] pointer-events-none z-0">
-                <div className="absolute inset-0 opacity-40 blur-[80px]"
+            {/* Top-Right Blue Gradient & Clouds - Centered */}
+            <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-full max-w-5xl pointer-events-none z-0">
+                <div className="absolute top-[-50px] right-[-50px] w-[500px] h-[500px] blur-[80px]"
                     style={{ background: 'radial-gradient(circle, rgba(180,210,255, 0.8) 0%, rgba(200,220,255,0) 70%)' }} />
                 <motion.div
                     animate={{ x: [0, -20, 0], y: [0, 10, 0] }}
                     transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute top-20 right-10 w-[400px] h-[300px] opacity-60"
+                    className="absolute top-20 right-20 w-[350px] h-[250px] opacity-60"
                 >
                     <Image src="/assets/clouds.avif" alt="Clouds Right" fill className="object-contain opacity-80" />
                 </motion.div>
@@ -116,9 +116,9 @@ export const TestimonialsSlider = () => {
 
 
             {/* --- Header Content --- */}
-            <div className="relative z-10 flex flex-col items-center text-center mb-12 w-full px-4">
-                <span className="font-caveat text-xl sm:text-2xl text-gray-600 mb-2">Testimonios</span>
-                <h2 className="font-serif text-5xl sm:text-6xl text-gray-900 tracking-tight leading-none mb-4">
+            <div className="relative z-10 flex flex-col items-center text-center mb-8 w-full px-4">
+                <span className="font-caveat text-xl sm:text-2xl text-gray-600 mb-1">Testimonios</span>
+                <h2 className="font-serif text-5xl sm:text-6xl text-gray-900 tracking-tight leading-none mb-2">
                     Palabras Honestas,
                 </h2>
 
@@ -142,7 +142,7 @@ export const TestimonialsSlider = () => {
             </div>
 
             {/*Quote Icon Badge*/}
-            <div className="relative z-10 mb-8">
+            <div className="relative z-10 mb-6">
                 <div className="w-24 h-10 bg-[#F9FAFB] border border-[#F3F4F6] rounded-full flex items-center justify-center gap-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] box-border px-4">
                     <div className="w-1 h-1 bg-gray-300 rounded-full transform rotate-45" />
                     <Quote className="w-5 h-5 text-gray-800 fill-gray-800" />
@@ -152,7 +152,7 @@ export const TestimonialsSlider = () => {
 
 
             {/* --- Slider Section --- */}
-            <div className="relative z-20 w-full max-w-3xl mx-auto px-6 h-[250px] sm:h-[300px] flex items-center justify-center mb-8">
+            <div className="relative z-20 w-full max-w-3xl mx-auto px-16 sm:px-6 h-[220px] sm:h-[250px] flex items-center justify-center mb-6">
                 <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                         key={currentIndex}
@@ -190,7 +190,7 @@ export const TestimonialsSlider = () => {
             </div>
 
             {/* --- Author/Footer Section --- */}
-            <div className="relative z-20 flex flex-col items-center gap-6">
+            <div className="relative z-20 flex flex-col items-center gap-4">
 
                 {/* Author Info (Only for non-CTA slides) */}
                 <div className="h-[60px] flex items-center justify-center">
@@ -235,7 +235,7 @@ export const TestimonialsSlider = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="flex items-center gap-4 mt-4">
+                <div className="flex items-center gap-4 mt-2">
                     <button
                         onClick={handlePrev}
                         disabled={currentIndex === 0}

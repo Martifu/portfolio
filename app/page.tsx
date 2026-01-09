@@ -3,6 +3,8 @@ import { AboutMe } from "@/components/AboutMe";
 import { Testimonials } from "@/components/Testimonials";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
 import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { CallToAction } from "@/components/CallToAction";
 import { Navbar } from "@/components/Navbar";
 import { TopBar } from "@/components/TopBar";
 
@@ -11,10 +13,12 @@ export default function Home() {
     <main className="min-h-screen bg-white font-sans text-slate-900 relative">
       <TopBar />
       <Hero />
-      <Testimonials />
       <AboutMe />
+      <Testimonials />
       <Services />
+      <Portfolio />
       <TestimonialsSlider />
+      <CallToAction />
 
       {/* Global Vertical Lines - Centered, below TopBar, spanning full height */}
       <div className="absolute top-[65px] md:top-[90px] bottom-0 left-0 right-0 w-[calc(100%-40px)] md:w-[calc(100%-48px)] xl:w-full max-w-5xl mx-auto border-x border-gray-100 pointer-events-none z-0" />

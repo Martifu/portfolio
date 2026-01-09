@@ -8,7 +8,7 @@ import { BlackButton } from "./BlackButton";
 
 export const Testimonials = () => {
     return (
-        <section className="relative w-full pt-4 lg:pt-12 pb-32 flex flex-col items-center overflow-hidden bg-white">
+        <section id="testimonials" className="relative w-full pt-4 lg:pt-12 pb-32 flex flex-col items-center overflow-hidden bg-white">
 
             {/* Background Warm Glow - Centered behind "Their Words" */}
             <div className="absolute top-[90px] left-1/2 -translate-x-1/2 w-full max-w-lg h-[400px] pointer-events-none z-0">
@@ -127,14 +127,26 @@ export const Testimonials = () => {
                 viewport={{ once: true }}
                 className="relative z-20"
             >
-                <BlackButton className="px-6 py-3">Leer más</BlackButton>
+                <a href="#testimonials-slider">
+                    <BlackButton className="cursor-pointer">Leer más</BlackButton>
+                </a>
             </motion.div>
 
         </section>
     );
 };
 
-const TestimonialCard = ({ quote, name, title, image, logo, delay = 0, gradient }: any) => {
+interface TestimonialCardProps {
+    quote: string;
+    name: string;
+    title: string;
+    image: string;
+    logo: string;
+    delay?: number;
+    gradient: string;
+}
+
+const TestimonialCard = ({ quote, name, title, image, logo, delay = 0, gradient }: TestimonialCardProps) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}

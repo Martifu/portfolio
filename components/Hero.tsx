@@ -3,12 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Copy, Dribbble, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Dribbble, Twitter, Linkedin, Instagram } from "lucide-react";
 import { BlackButton } from "./BlackButton";
 
 export const Hero = () => {
     return (
-        <section className="relative w-full h-auto pb-20 md:pb-10 lg:pb-40 overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-16 md:pt-24 lg:pt-48">
+        <section id="hero" className="relative w-full h-auto pb-20 md:pb-10 lg:pb-40 overflow-hidden bg-white flex flex-col items-center justify-start pt-8 sm:pt-16 md:pt-24 lg:pt-48">
 
             {/* Background Gradients - Split Left (Warm) / Right (Blue) - Behind Cards */}
             <div className="absolute top-[-5%] sm:top-[2%] md:top-[5%] lg:top-[-2%] xl:top-[-4%] left-1/2 -translate-x-1/2 pointer-events-none z-0">
@@ -251,10 +251,21 @@ export const Hero = () => {
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}
                     className="mt-6 sm:mt-7 md:mt-8 flex items-center gap-4 sm:gap-5"
                 >
-                    {[Dribbble, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                        <div key={i} className="p-3 sm:p-3.5 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-600 hover:text-black hover:scale-110 transition-all cursor-pointer">
+                    {[
+                        { icon: Dribbble, href: "https://dribbble.com" },
+                        { icon: Twitter, href: "https://twitter.com" },
+                        { icon: Linkedin, href: "https://linkedin.com" },
+                        { icon: Instagram, href: "https://instagram.com" }
+                    ].map(({ icon: Icon, href }, i) => (
+                        <a
+                            key={i}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 sm:p-3.5 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-600 hover:text-black hover:scale-110 transition-all cursor-pointer"
+                        >
                             <Icon size={20} className="sm:w-[22px] sm:h-[22px]" />
-                        </div>
+                        </a>
                     ))}
                 </motion.div>
 

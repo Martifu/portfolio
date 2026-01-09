@@ -13,6 +13,7 @@ export const Navbar = () => {
                 {/* Avatar Section */}
                 <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 radial-gradient from-white to-gray-200 cursor-pointer ">
                     <Image
+                        onClick={() => window.location.href = "#hero"}
                         src="/assets/person.png" // Using person image as avatar for now
                         alt="Avatar"
                         fill
@@ -25,20 +26,28 @@ export const Navbar = () => {
 
                 {/* Navigation Icons */}
                 <div className="flex items-center gap-1">
-                    {[User, Briefcase, FileText, MessageSquare].map((Icon, index) => (
-                        <button
+                    {[
+                        { icon: User, href: "#about" },
+                        { icon: Briefcase, href: "#services" },
+                        { icon: FileText, href: "#portfolio" },
+                        { icon: MessageSquare, href: "#hero" }
+                    ].map(({ icon: Icon, href }, index) => (
+                        <a
                             key={index}
-                            className="p-2.5 text-gray-500 hover:text-black hover:bg-gray-100 rounded-full transition-all"
+                            href={href}
+                            className="p-2.5 text-gray-500 hover:text-black hover:bg-gray-100 rounded-full transition-all cursor-pointer"
                         >
                             <Icon size={18} />
-                        </button>
+                        </a>
                     ))}
                 </div>
 
                 {/* Contact Button */}
-                <BlackButton className="ml-2 px-5 py-2.5 cursor-pointer">
-                    Contacto
-                </BlackButton>
+                <a href="#hero">
+                    <BlackButton className="ml-2 px-5 py-2.5 cursor-pointer">
+                        Contacto
+                    </BlackButton>
+                </a>
 
             </div>
         </div>

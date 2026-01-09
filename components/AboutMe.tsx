@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const AboutMe = () => {
     return (
-        <section className="relative w-full py-20 pb-32 flex flex-col items-center bg-white overflow-hidden">
+        <section id="about" className="relative w-full py-20 pb-32 flex flex-col items-center bg-white overflow-hidden">
 
             {/* Header */}
             <div className="flex flex-col items-center gap-4 mb-12 relative z-20">
@@ -158,7 +158,7 @@ export const AboutMe = () => {
                 <div className="space-y-4">
                     <span className="font-caveat text-xl text-gray-500 block">¿Mi Misión?</span>
                     <p className="text-gray-600 text-xl font-normal leading-relaxed">
-                        Mi misión es ayudar a las marcas a construir experiencias digitales que van más allá de lo "bonito": haciéndolas intuitivas, atractivas y verdaderamente impactantes.
+                        Mi misión es ayudar a las marcas a construir experiencias digitales que van más allá de lo &quot;bonito&quot;: haciéndolas intuitivas, atractivas y verdaderamente impactantes.
                     </p>
                 </div>
             </motion.div>
