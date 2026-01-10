@@ -142,7 +142,7 @@ export const CallToAction = () => {
                 </a>
                 <a href="/assets/Martin Esparza CV.pdf" target="_blank" rel="noopener noreferrer" className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
                     <FileUser size={18} />
-                    Mi CV
+                    CV
                 </a>
             </motion.div>
 

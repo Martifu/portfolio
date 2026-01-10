@@ -45,7 +45,7 @@ export const Navbar = () => {
                 {/* Contact Button */}
                 <a href="/assets/Martin Esparza CV.pdf" target="_blank" rel="noopener noreferrer">
                     <BlackButton className="ml-2 px-5 py-2.5 cursor-pointer">
-                        Mi CV
+                        CV
                     </BlackButton>
                 </a>
 
