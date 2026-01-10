@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Monitor, Phone, Bot, LucideIcon } from "lucide-react";
+import { Monitor, Phone, Bot, LucideIcon, Smartphone } from "lucide-react";
 import { BlackButton } from "./BlackButton";
 
 interface Service {
@@ -19,12 +19,10 @@ const SERVICES: Service[] = [
     id: 0,
     title: "Desarrollo Móvil",
     description: "Interfaces intuitivas para productos digitales",
-    icon: Phone,
+    icon: Smartphone,
     mockupImages: [
-      "/assets/reda-crm.png",
-      "/assets/gebesa-card.png",
-      "/assets/ai-card.png",
-      "/assets/simpatia.png"
+      "/assets/reda-crm-gallery-3.webp",
+      "/assets/gebesa-card.webp",
     ]
   },
   {
@@ -33,10 +31,8 @@ const SERVICES: Service[] = [
     description: "Sitios web que convierten visitantes en clientes",
     icon: Monitor,
     mockupImages: [
-      "/assets/simpatia.png",
-      "/assets/reda-crm.png",
-      "/assets/n8n.png",
-      "/assets/gebesa-card.png"
+      "/assets/reda-crm-gallery-2.webp",
+      "/assets/reda-crm.webp"
     ]
   },
   {
@@ -45,10 +41,8 @@ const SERVICES: Service[] = [
     description: "Procesos automatizados para mejorar la eficiencia (n8n)",
     icon: Bot,
     mockupImages: [
-      "/assets/ai-card.png",
-      "/assets/reda-crm.png",
-      "/assets/gebesa-card.png",
-      "/assets/simpatia.png"
+      "/assets/n8n_agentes_reda.webp",
+      "/assets/n8n_agentes_simpatia.webp"
     ]
   }
 ];
@@ -96,7 +90,7 @@ export const Services = () => {
                 <div className="absolute inset-0 rounded-[0.35em] shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]" />
                 <div className="relative w-[0.6em] h-[0.75em] overflow-hidden">
                   <Image
-                    src="https://framerusercontent.com/images/O7ue84CHxV7YtOR26PKHuHpmfw.png?width=144&height=192"
+                    src="/assets/hand-icon.webp"
                     alt="Hand Icon"
                     fill
                     className="object-contain"

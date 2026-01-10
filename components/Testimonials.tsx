@@ -96,11 +96,11 @@ export const Testimonials = () => {
 
                 {/* Card 1 - Blue Sky (Right Blue from Hero) */}
                 <TestimonialCard
-                    quote="Tuve el placer de trabajar con Martin en un proyecto reciente de diseño UI/UX, y su trabajo superó mis expectativas. Ejecutó el diseño con precisión, creatividad y atención al detalle. Martin fue capaz de entender..."
-                    name="Denver Lopes"
-                    title="Founder Frogit"
-                    image="/assets/person.png"
-                    logo="/assets/interface-icon.png"
+                    quote="La capacidad de Martin para interpretar y potenciar nuestra visión de innovación en Gebesa fue excepcional. Su enfoque va más allá del desarrollo técnico; aporta una perspectiva estratégica y una calidad visual impecable que elevó significativamente el resultado final."
+                    name="Rodolfo Manzur"
+                    title="Director de Innovación en Gebesa"
+                    image="/assets/testimonials/rm.jpeg"
+                    logo="/assets/testimonials/logo_gebesa.jpg"
                     delay={0.2}
                     // Linear Gradient Top to Bottom
                     gradient="linear-gradient(to bottom, rgba(180,210,255, 0.5) 0%, rgba(255,255,255,0) 60%)"
@@ -108,11 +108,11 @@ export const Testimonials = () => {
 
                 {/* Card 2 - Warm Sky (Left Warm from Hero) */}
                 <TestimonialCard
-                    quote="Trabajar con Martin fue honestamente muy fácil. El tipo puede hacer magia bajo presión: le lanzamos un proyecto con un plazo loco de 24 horas y lo clavó perfectamente, incluso estando en zonas horarias completamente diferentes..."
-                    name="Angela Wu"
-                    title="Founder Komo AI"
-                    image="/assets/person.png"
-                    logo="/assets/interface-icon.png"
+                    quote="Colaborar con Martin en REDA ha sido una decisión estratégica fundamental. Combina una solidez técnica notable con una sensibilidad de diseño exquisita. Su compromiso y capacidad propositiva transformaron nuestras ideas iniciales en una solución digital de alto impacto."
+                    name="Hassan Chaul"
+                    title="CEO & Founder REDA"
+                    image="/assets/testimonials/hc.jpeg"
+                    logo="/assets/testimonials/logo_reda.webp"
                     delay={0.3}
                     // Linear Gradient Top to Bottom
                     gradient="linear-gradient(to bottom, rgba(255,200,160, 0.4) 0%, rgba(255,255,255,0) 60%)"
@@ -204,8 +204,8 @@ const TestimonialCard = ({ quote, name, title, image, logo, delay = 0, gradient 
                     </div>
 
                     {/* Logo Badge */}
-                    <div className="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center p-2">
-                        <Image src={logo} alt="Company" width={20} height={20} className="object-contain opacity-80" />
+                    <div className="relative w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0">
+                        <Image src={logo} alt="Company" fill className="object-cover opacity-80" />
                     </div>
                 </div>
             </div>

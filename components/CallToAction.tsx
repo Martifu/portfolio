@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { BlackButton } from "./BlackButton";
 import { PROJECTS, Project } from "@/lib/projects";
 import { ProjectDetailModal } from "./ProjectDetailModal";
+import { FileUser } from "lucide-react";
 
 export const CallToAction = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -60,7 +61,7 @@ export const CallToAction = () => {
                                 initial={{ x: "0%" }}
                                 animate={{ x: "-50%" }}
                                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                                className="absolute top-0 left-0 w-[200%] h-full flex"
+                                className="absolute top-[30%] left-0 w-[200%] h-full flex"
                             >
                                 <div className="w-1/2 h-full relative">
                                     <Image src="/assets/clouds.avif" alt="Clouds CTA 1" fill className="object-contain" />
@@ -104,7 +105,7 @@ export const CallToAction = () => {
             {/* Infinite Carousel */}
             <div className="relative z-20 w-full max-w-5xl mx-auto mb-12 overflow-hidden">
                 {/* Left Gradient Fade */}
-                <div 
+                <div
                     className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white/60 to-transparent z-10 pointer-events-none"
                     style={{
                         maskImage: 'linear-gradient(to bottom, transparent, black 20%)',
@@ -113,7 +114,7 @@ export const CallToAction = () => {
                 />
 
                 {/* Right Gradient Fade */}
-                <div 
+                <div
                     className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white/60 to-transparent z-10 pointer-events-none"
                     style={{
                         maskImage: 'linear-gradient(to bottom, transparent, black 20%)',
@@ -121,8 +122,8 @@ export const CallToAction = () => {
                     }}
                 />
 
-                <InfiniteCarousel 
-                    projects={PROJECTS} 
+                <InfiniteCarousel
+                    projects={PROJECTS}
                     onProjectClick={handleProjectClick}
                 />
             </div>
@@ -134,15 +135,15 @@ export const CallToAction = () => {
                 viewport={{ once: true }}
                 className="relative z-20 flex flex-row items-center justify-center gap-3 mb-16 px-1"
             >
-                <div className="flex-shrink-0 w-auto">
+                <a href="mailto:martin0013esp@gmail.com" className="flex-shrink-0 w-auto">
                     <BlackButton className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm md:text-base cursor-pointer">
                         Trabajemos Juntos
                     </BlackButton>
-                </div>
-                <button className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
-                    <BriefcaseIcon />
-                    Agendar Llamada
-                </button>
+                </a>
+                <a href="/assets/Martin Esparza CV.pdf" target="_blank" rel="noopener noreferrer" className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
+                    <FileUser size={18} />
+                    Mi CV
+                </a>
             </motion.div>
 
             {/* Email */}
@@ -152,8 +153,8 @@ export const CallToAction = () => {
                 viewport={{ once: true }}
                 className="relative z-20 mb-8"
             >
-                <a href="mailto:martinesparzadev@gmail.com" className="text-xl sm:text-2xl text-gray-600 hover:text-gray-800 transition-colors font-normal">
-                    martinesparzadev@gmail.com
+                <a href="mailto:martin0013esp@gmail.com" className="text-xl sm:text-2xl text-gray-500 hover:text-gray-800 transition-colors font-normal">
+                    martin0013esp@gmail.com
                 </a>
             </motion.div>
 
@@ -263,7 +264,7 @@ const InfiniteCarousel = ({ projects, onProjectClick }: { projects: Project[], o
 
 const CarouselCard = ({ project, onClick }: { project: Project, onClick: () => void }) => {
     return (
-        <div 
+        <div
             onClick={onClick}
             className="flex-shrink-0 w-64 sm:w-72 flex flex-col bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-[28px] p-[3px] shadow-[0_4px_16px_rgba(0,0,0,0.06)] cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
         >

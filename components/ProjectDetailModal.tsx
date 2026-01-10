@@ -35,6 +35,15 @@ export const ProjectDetailModal = ({ isOpen, onClose, project, onNextProject }: 
         return () => window.removeEventListener("keydown", handleEsc);
     }, [onClose]);
 
+    const scrollContainerRef = React.useRef<HTMLDivElement>(null);
+
+    // Reset scroll when project changes
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+        }
+    }, [project]);
+
     if (!isOpen || !project) return null;
 
     return (
@@ -67,14 +76,14 @@ export const ProjectDetailModal = ({ isOpen, onClose, project, onNextProject }: 
                         </button>
 
                         {/* Scrollable Content */}
-                        <div className="overflow-y-auto overflow-x-hidden flex-1 p-6 sm:p-10 md:p-12 scrollbar-hide">
-                            
+                        <div ref={scrollContainerRef} className="overflow-y-auto overflow-x-hidden flex-1 p-6 sm:p-10 md:p-12 scrollbar-hide">
+
                             {/* Header Section */}
                             <div className="flex flex-col gap-6 mb-10">
                                 <h2 className="font-serif text-4xl sm:text-5xl text-gray-900 leading-tight">
                                     {project.title}
                                 </h2>
-                                
+
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
                                     {project.description}
                                 </p>
@@ -184,20 +193,20 @@ export const ProjectDetailModal = ({ isOpen, onClose, project, onNextProject }: 
                                     </div>
                                 </div>
                             )}
-                            
+
                         </div>
 
-                         {/* Footer / Next Project */}
+                        {/* Footer / Next Project */}
                         {onNextProject && (
                             <div className="border-t border-gray-100 p-6 bg-gray-50/50 flex justify-end">
-                                <button 
+                                <button
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         onNextProject();
                                     }}
                                     className="group flex items-center gap-3 text-gray-500 hover:text-gray-900 transition-colors font-medium text-lg"
                                 >
-                                    <span>Next Project</span>
+                                    <span>Siguiente Proyecto</span>
                                     <div className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center group-hover:bg-gray-900 group-hover:border-gray-900 group-hover:text-white transition-all shadow-sm">
                                         <ArrowRight size={18} />
                                     </div>

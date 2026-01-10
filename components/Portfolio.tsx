@@ -120,7 +120,10 @@ export const Portfolio = () => {
                 viewport={{ once: true }}
                 className="relative z-20"
             >
-                <BlackButton className="px-8 py-4 text-base cursor-pointer">
+                <BlackButton
+                    className="px-8 py-4 text-base cursor-pointer"
+                    onClick={() => handleProjectClick(PROJECTS[0])}
+                >
                     Ver Más Detalles
                 </BlackButton>
             </motion.div>

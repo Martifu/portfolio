@@ -10,28 +10,21 @@ import { BlackButton } from "./BlackButton";
 const TESTIMONIALS = [
     {
         id: 0,
-        quote: "Tuve el placer de trabajar con Martin en un proyecto reciente de diseño UI/UX, y su trabajo superó mis expectativas. Ejecutó el diseño con precisión, creatividad y atención al detalle. Martin fue capaz de entender...",
-        name: "Denver Lopes",
-        title: "Founder Frogit",
-        image: "/assets/person.png"
+        quote: "La capacidad de Martin para interpretar y potenciar nuestra visión de innovación en Gebesa fue excepcional. Su enfoque va más allá del desarrollo técnico; aporta una perspectiva estratégica y una calidad visual impecable que elevó significativamente el resultado final.",
+        name: "Rodolfo Manzur",
+        title: "Director de Innovación en Gebesa",
+        image: "/assets/testimonials/rm.jpeg"
     },
     {
         id: 1,
-        quote: "Trabajar con Martin fue honestamente muy fácil. El tipo puede hacer magia bajo presión: le lanzamos un proyecto con un plazo loco de 24 horas y lo clavó perfectamente, incluso estando en zonas horarias completamente diferentes. Su capacidad para comunicar ideas técnicas de forma sencilla es una habilidad rara.",
-        name: "Angela Wu",
-        title: "Founder Komo AI",
-        image: "/assets/person.png"
-    },
-    {
-        id: 2,
-        quote: "Martin transformó nuestra presencia digital por completo. No solo entregó un código impecable, sino que aportó ideas de diseño que mejoraron significativamente la experiencia de usuario de nuestros clientes. Es un desarrollador que realmente entiende el negocio y el diseño.",
-        name: "Carlos M.",
-        title: "CTO TechStartup",
-        image: "/assets/person.png"
+        quote: "Colaborar con Martin en REDA ha sido una decisión estratégica fundamental. Combina una solidez técnica notable con una sensibilidad de diseño exquisita. Su compromiso y capacidad propositiva transformaron nuestras ideas iniciales en una solución digital de alto impacto.",
+        name: "Hassan Chaul",
+        title: "CEO & Founder REDA",
+        image: "/assets/testimonials/hc.jpeg"
     },
     // Final CTA Slide
     {
-        id: 3,
+        id: 2,
         isCTA: true,
         quote: "¿Quién Sigue? ¿Tú? ¡Empecemos!",
         name: "Tu nombre",
@@ -167,7 +160,7 @@ export const TestimonialsSlider = () => {
                             scale: { duration: 0.2 },
                             filter: { duration: 0.2 }
                         }}
-                        className="absolute w-full flex flex-col items-center text-center"
+                        className="absolute w-full flex flex-col items-center text-center px-6 sm:px-0"
                     >
                         {!currentTestimonial.isCTA ? (
                             // Normal Testimonial Content

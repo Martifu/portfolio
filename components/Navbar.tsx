@@ -14,7 +14,7 @@ export const Navbar = () => {
                 <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 radial-gradient from-white to-gray-200 cursor-pointer ">
                     <Image
                         onClick={() => window.location.href = "#hero"}
-                        src="/assets/person.png" // Using person image as avatar for now
+                        src="/assets/person.webp" // Using person image as avatar for now
                         alt="Avatar"
                         fill
                         className="object-cover translate-y-1 opacity-90"
@@ -30,7 +30,7 @@ export const Navbar = () => {
                         { icon: User, href: "#about" },
                         { icon: Briefcase, href: "#services" },
                         { icon: FileText, href: "#portfolio" },
-                        { icon: MessageSquare, href: "#hero" }
+                        { icon: MessageSquare, href: "#testimonials-slider" }
                     ].map(({ icon: Icon, href }, index) => (
                         <a
                             key={index}
@@ -43,9 +43,9 @@ export const Navbar = () => {
                 </div>
 
                 {/* Contact Button */}
-                <a href="#hero">
+                <a href="/assets/Martin Esparza CV.pdf" target="_blank" rel="noopener noreferrer">
                     <BlackButton className="ml-2 px-5 py-2.5 cursor-pointer">
-                        Contacto
+                        Mi CV
                     </BlackButton>
                 </a>
 

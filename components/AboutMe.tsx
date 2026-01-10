@@ -93,7 +93,7 @@ export const AboutMe = () => {
                     className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-[20px] sm:rounded-[30px] overflow-hidden shadow-xl border-[2px] border-white transform translate-x-[20%] sm:translate-x-[-20%] translate-y-[10%] sm:-translate-y-[-5%] z-10"
                 >
                     <Image
-                        src="/assets/about-left.png"
+                        src="/assets/about-left.webp"
                         alt="Work Left"
                         fill
                         className="object-cover"
@@ -126,7 +126,7 @@ export const AboutMe = () => {
                     className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-[20px] sm:rounded-[30px] overflow-hidden shadow-xl border-[2px] border-white transform -translate-x-[20%] sm:-translate-x-[-20%] translate-y-[10%] sm:-translate-y-[-5%] z-10"
                 >
                     <Image
-                        src="/assets/about-right.png"
+                        src="/assets/about-right.webp"
                         alt="Work Right"
                         fill
                         className="object-cover"

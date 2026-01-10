@@ -1,179 +1,215 @@
 export interface Project {
   id: number;
   title: string;
-  subtitle?: string; // e.g. "SaaS Dashboard"
+  subtitle?: string;
   tags: string[];
   image: string;
-  
+
   // Detailed content for the modal
   description?: string;
   date?: string;
   role?: string;
   company?: string;
-  
+
   problem?: {
     title: string;
     points: { title: string; description: string }[];
   };
-  
+
   solution?: {
     title: string;
     points: { title: string; description: string }[];
   };
-  
+
   marketAnalysis?: {
     title: string;
     points: { title: string; description: string }[];
   };
-  
+
   result?: {
     title: string;
     points: { title: string; description: string }[];
   };
-  
+
   gallery?: string[];
 }
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Reda CRM", // This maps to "Yardbook - Dashboard SaaS" or similar in the original list, but I'll make it explicit as requested
+    title: "Reda CRM",
     subtitle: "Custom CRM Platform",
-    tags: ["Dashboard SaaS", "App Development"],
-    image: "/assets/reda-crm.png",
-    
-    description: "This case study outlines the development of a custom CRM platform for Reda, a real estate tech company focused on lead and appointment management. The project involved building cross-platform mobile and web applications using Flutter, integrating Firebase for real-time data, and automating workflows through n8n. The result was a fully tailored tool that streamlined internal operations and improved agent-client interaction.",
-    
-    date: "January, 2021",
-    role: "Flutter Developer & Frontend Engineer",
+    tags: ["Flutter", "Firebase", "n8n"],
+    image: "/assets/reda-crm-main.webp",
+    description: "Este estudio de caso describe el desarrollo de una plataforma CRM personalizada para Reda, una empresa de tecnología inmobiliaria centrada en la gestión de prospectos y citas. El proyecto implicó la construcción de aplicaciones móviles y web multiplataforma utilizando Flutter, integrando Firebase para datos en tiempo real y automatizando flujos de trabajo a través de n8n. El resultado fue una herramienta completamente adaptada que optimizó las operaciones internas y mejoró la interacción entre agentes y clientes.",
+    date: "Enero, 2021",
+    role: "Desarrollador Flutter e Ingeniero Frontend",
     company: "Reda",
-    
     problem: {
-      title: "Problem",
+      title: "Problema",
       points: [
-        { title: "Disconnected Tools:", description: "Internal teams relied on scattered tools and manual processes to manage leads, appointments, and client profiles." },
-        { title: "Lack of Real-Time Data:", description: "There was no centralized platform to sync client interactions or provide live updates to agents in the field." },
-        { title: "Inefficient Workflow:", description: "The absence of automation led to delays in lead follow-up, appointment scheduling, and notification handling." },
-        { title: "Scaling with Consistency:", description: "As the company grew, maintaining consistent agent-client communication and operational flow became increasingly difficult." }
+        { title: "Herramientas Desconectadas", description: "Los equipos internos dependían de herramientas dispersas y procesos manuales para gestionar leads, citas y perfiles de clientes." },
+        { title: "Falta de Datos en Tiempo Real", description: "No había una plataforma centralizada para sincronizar las interacciones con los clientes o proporcionar actualizaciones en vivo a los agentes en el campo." },
+        { title: "Flujo de Trabajo Ineficiente", description: "La ausencia de automatización provocó retrasos en el seguimiento de leads, programación de citas y manejo de notificaciones." },
+        { title: "Escalar con Consistencia", description: "A medida que la empresa creció, mantener una comunicación constante entre agentes y clientes, así como un flujo operativo, se volvió cada vez más difícil." }
       ]
     },
-    
     solution: {
-      title: "Solution",
+      title: "Solución",
       points: [
-        { title: "Cross-Platform App Development", description: "Developed a mobile and web CRM app using Flutter to centralize lead tracking, appointment scheduling, and agent-client interactions." },
-        { title: "Real-Time Data Integration", description: "Implemented Firebase for live updates, real-time data sync, and seamless user authentication across platforms." },
-        { title: "Workflow Automation", description: "Connected backend logic with n8n to automate lead assignments, follow-ups, and in-app notifications—reducing manual tasks and delays." },
-        { title: "Scalable Frontend Architecture", description: "Designed a modular UI that adapts to different user roles (agents, admins, profile managers), with a focus on clarity, responsiveness, and speed." }
+        { title: "Desarrollo de Aplicaciones Multiplataforma", description: "Desarrollada una aplicación CRM móvil y web utilizando Flutter para centralizar el seguimiento de leads, la programación de citas y las interacciones entre agentes y clientes." },
+        { title: "Integración de Datos en Tiempo Real", description: "Implementado Firebase para actualizaciones en vivo, sincronización de datos en tiempo real y autenticación de usuarios sin problemas en múltiples plataformas." },
+        { title: "Automatización de Flujos de Trabajo", description: "Conectada la lógica del backend con n8n para automatizar las asignaciones de leads, seguimientos y notificaciones dentro de la aplicación, reduciendo tareas manuales y retrasos." },
+        { title: "Arquitectura Frontend Escalable", description: "Diseñada una interfaz de usuario modular que se adapta a diferentes roles de usuario (agentes, administradores, gerentes de perfiles), con un enfoque en la claridad, la capacidad de respuesta y la rapidez." }
       ]
     },
-    
     marketAnalysis: {
-      title: "Market Analysis",
+      title: "Análisis de Mercado",
       points: [
-        { title: "Target Users:", description: "Real estate agents and profiling teams in need of a centralized tool to manage leads, schedule appointments, and streamline follow-ups efficiently." },
-        { title: "Competitive Landscape:", description: "Most CRMs in the real estate space were either overly complex or too generic, lacking the customization and agility Reda needed for its internal operations." },
-        { title: "Technology Trends:", description: "Increasing adoption of real-time databases, mobile-first solutions, and automation platforms like n8n highlighted the opportunity to build a lightweight, scalable system tailored to Reda’s workflow." }
+        { title: "Usuarios Objetivo", description: "Agentes inmobiliarios y equipos de perfilación que necesitan una herramienta centralizada para gestionar leads, programar citas y optimizar el seguimiento de manera eficiente." },
+        { title: "Panorama Competitivo", description: "La mayoría de los CRMs en el sector inmobiliario eran demasiado complejos o demasiado genéricos, careciendo de la personalización y agilidad que Reda necesitaba para sus operaciones internas." },
+        { title: "Tendencias Tecnológicas", description: "El aumento en la adopción de bases de datos en tiempo real, soluciones móviles y plataformas de automatización como n8n destacó la oportunidad de construir un sistema ligero y escalable adaptado al flujo de trabajo de Reda." }
       ]
     },
-    
     result: {
-      title: "Result",
+      title: "Resultado",
       points: [
-        { title: "Operational Efficiency", description: "Automated lead distribution and follow-up processes reduced manual workload, saving time and minimizing human error." },
-        { title: "Improved Agent Performance", description: "Real-time updates and centralized data allowed agents to respond faster and manage appointments more effectively." },
-        { title: "Stronger Internal Communication", description: "The unified platform streamlined coordination between profiling teams and field agents, improving consistency and accountability." },
-        { title: "Scalable Infrastructure", description: "The modular architecture and automation tools enabled Reda to scale its operations without sacrificing control or speed." }
+        { title: "Eficiencia Operativa", description: "La distribución de leads y los procesos de seguimiento automatizados redujeron la carga de trabajo manual, ahorrando tiempo y minimizando errores humanos." },
+        { title: "Mejora del Desempeño de los Agentes", description: "Las actualizaciones en tiempo real y los datos centralizados permitieron a los agentes responder más rápido y gestionar las citas de manera más efectiva." },
+        { title: "Comunicación Interna Más Fuerte", description: "La plataforma unificada simplificó la coordinación entre los equipos de perfilado y los agentes de campo, mejorando la consistencia y la responsabilidad." },
+        { title: "Infraestructura Escalable", description: "La arquitectura modular y las herramientas de automatización permitieron a Reda escalar sus operaciones sin sacrificar control ni velocidad." }
       ]
     },
-    
     gallery: [
-      "/assets/reda-crm.png",
-      "/assets/ai-card.png",
-      "/assets/gebesa-card.png"
+      "/assets/reda-crm-gallery-1.webp",
+      "/assets/reda-crm-gallery-2.webp",
+      "/assets/reda-crm-gallery-3.webp"
     ]
   },
   {
     id: 2,
-    title: "[Hero] Agencia con IA",
-    subtitle: "Landing Page",
-    tags: ["Sección Hero"],
-    image: "/assets/ai-card.png",
-    description: "Una solución innovadora para agencias digitales que buscan integrar inteligencia artificial en sus flujos de trabajo. Este proyecto se centró en crear una experiencia de usuario inmersiva desde el primer impacto.",
-    date: "March, 2023",
-    role: "Frontend Developer",
-    company: "AI Agency",
+    title: "Gebesa Accend App",
+    subtitle: "App Control Bluetooth",
+    tags: ["Flutter", "Bluetooth BLE", "IoT"],
+    image: "/assets/gebesa-main.webp",
+    description: "Desarrollé una aplicación móvil multiplataforma para Gebesa para controlar escritorios inteligentes a través de Bluetooth. La aplicación permite a los usuarios ajustar la altura, guardar posiciones de memoria y sincronizar en tiempo real entre iOS y Android.",
+    date: "2024 - 2025",
+    role: "Desarrollador Flutter – UI/UX móvil e integración Bluetooth",
+    company: "Gebesa",
     problem: {
-      title: "El Problema",
+      title: "Problema",
       points: [
-        { title: "Baja Conversión:", description: "Las landing pages tradicionales no lograban comunicar el valor de la IA de manera efectiva." },
-        { title: "Diseño Desactualizado:", description: "La imagen visual no reflejaba la modernidad de la tecnología ofrecida." }
+        { title: "Experiencia de Usuario Limitada", description: "Los escritorios inteligentes de Gebesa ofrecían funcionalidad avanzada, pero carecían de una interfaz digital para que los usuarios interactuaran con ellos. Los clientes estaban limitados a controles físicos manuales, lo que hacía que ajustar la altura del escritorio, guardar preferencias y gestionar su espacio de trabajo se sintiera anticuado y poco intuitivo. Sin una solución móvil, la experiencia del usuario no coincidía con la naturaleza innovadora del producto." }
       ]
     },
     solution: {
-      title: "La Solución",
+      title: "Solución",
       points: [
-        { title: "Diseño Moderno", description: "Uso de efectos visuales avanzados y glassmorphism." },
-        { title: "Copywriting Persuasivo", description: "Textos orientados a la acción y beneficios claros." }
+        { title: "Desarrollo de Aplicaciones Bluetooth", description: "Construí una aplicación móvil en Flutter con integración BLE para comunicarme directamente con el hardware de escritorio." },
+        { title: "Experiencia Multiplataforma", description: "Desarrollé una interfaz de usuario consistente y receptiva tanto para iOS como para Android utilizando una base de código compartida y paquetes BLE nativos." },
+        { title: "Controles Personalizados y Posiciones de Memoria", description: "Implementé una interfaz de usuario para ajustar la altura manualmente o guardar/cargar posiciones de memoria." },
+        { title: "Integración con Firebase", description: "Usé Firebase para notificaciones push, análisis y escalabilidad futura." }
       ]
-    }
+    },
+    marketAnalysis: {
+      title: "Análisis de Mercado",
+      points: [
+        { title: "Integración Móvil", description: "Pocos competidores ofrecen una integración móvil completa a nivel del consumidor." },
+        { title: "Primer Jugador", description: "Gebesa quería una ventaja de primer jugador con escritorios inteligentes en LATAM." },
+        { title: "Tendencia de Mercado", description: "Demanda creciente de muebles ergonómicos y inteligentes en espacios de trabajo híbridos." }
+      ]
+    },
+    result: {
+      title: "Resultado",
+      points: [
+        { title: "Mejor experiencia del usuario", description: "Los usuarios ahora pueden controlar sus escritorios de forma remota y guardar preferencias de altura." },
+        { title: "Tiempo de configuración más rápido", description: "El proceso de emparejamiento BLE se ha simplificado en todos los modelos." },
+        { title: "Aumento del valor del producto", description: "La aplicación añadió una capa tecnológica que diferencia a Gebesa de los competidores tradicionales." },
+        { title: "Arquitectura a prueba de futuro", description: "La aplicación fue diseñada para actualizaciones fáciles y expansión a nuevos modelos de escritorios o características." }
+      ]
+    },
+    gallery: [
+      "/assets/gebesa-gallery-1.webp",
+      "/assets/gebesa-gallery-2.webp",
+      "/assets/gebesa-gallery-3.webp"
+    ]
   },
   {
     id: 3,
-    title: "Portafolio Sitio Web Personal",
-    subtitle: "Marca Personal",
-    tags: ["Landing Page", "Responsivo"],
-    image: "/assets/reda-crm.png", // Using duplicate image as placeholder if needed, or unique one if available
-    description: "Este mismo portafolio. Diseñado para mostrar habilidades técnicas y de diseño, con un enfoque en la experiencia del usuario y la performance.",
-    date: "January, 2026",
-    role: "Full Stack Developer",
-    company: "Personal",
-     problem: {
-      title: "El Desafío",
+    title: "Agente Simpatía",
+    subtitle: "Atención Ciudadana IA",
+    tags: ["n8n", "AI Agents", "WhatsApp"],
+    image: "/assets/n8n_agentes_simpatia.webp",
+    description: "Desarrollé un sistema multi-agente en n8n para el Gobierno de Gómez Palacio, Durango. El agente 'La Vaquerita' atiende a ciudadanos vía WhatsApp, gestiona tickets de servicios públicos, agenda citas y canaliza solicitudes a las direcciones correspondientes de forma automatizada.",
+    date: "2025",
+    role: "Desarrollador n8n – Arquitectura de agentes IA e integraciones",
+    company: "Simpatía / Gobierno de Gómez Palacio",
+    problem: {
+      title: "Problema",
       points: [
-        { title: "Diferenciación:", description: "Destacar en un mercado competitivo de desarrolladores." },
-        { title: "Performance:", description: "Lograr animaciones fluidas sin sacrificar la velocidad de carga." }
+        { title: "Saturación y Falta de Seguimiento", description: "El gobierno municipal de Gómez Palacio recibía cientos de solicitudes diarias de ciudadanos a través de WhatsApp: reportes de baches, fugas de agua, consultas de trámites, solicitudes de citas y más. El personal humano no podía atender el volumen de mensajes de manera oportuna, lo que generaba tiempos de respuesta largos, ciudadanos frustrados y solicitudes perdidas. No existía un sistema centralizado para dar seguimiento a las peticiones ni para canalizar automáticamente los casos a las direcciones correctas." }
       ]
     },
     solution: {
-      title: "La Estrategia",
+      title: "Solución",
       points: [
-        { title: "Next.js & Tailwind", description: "Stack moderno para máxima velocidad y flexibilidad." },
-        { title: "Framer Motion", description: "Animaciones que guían la atención del usuario sin abrumar." }
+        { title: "Arquitectura Multi-Agente con IA", description: "Diseñé un sistema de 4 agentes especializados que trabajan en conjunto: un agente maestro que orquesta la conversación, un subagente de dudas para información general, un subagente de citas para agendar visitas, un subagente de tickets para registrar incidencias y un subagente de canalización para derivar casos a otras direcciones." },
+        { title: "Integración WhatsApp + Procesamiento Multimodal", description: "El sistema recibe mensajes de texto, audio e imágenes. Los audios se transcriben automáticamente con OpenAI Whisper, permitiendo que los ciudadanos reporten problemas hablando naturalmente." },
+        { title: "Memoria Conversacional Persistente", description: "Implementé memoria de chat con PostgreSQL para mantener el contexto de conversaciones largas. El agente recuerda interacciones previas y puede retomar casos pendientes." },
+        { title: "Sistema de Tickets Inteligente", description: "Cada reporte genera un ticket con clasificación automática (servicio, trámite, incidencia o queja), validación de duplicados y asignación a la dirección correspondiente." },
+        { title: "Gestión de Citas en Tiempo Real", description: "El subagente de citas consulta disponibilidad real, valida horarios y confirma citas automáticamente, todo sin intervención humana." }
+      ]
+    },
+    result: {
+      title: "Resultado",
+      points: [
+        { title: "Atención 24/7", description: "Los ciudadanos reciben respuesta inmediata cualquier día y hora, sin depender de horarios de oficina." },
+        { title: "Reducción de carga operativa", description: "El personal humano solo interviene en casos complejos que el agente escala automáticamente." },
+        { title: "Trazabilidad completa", description: "Cada solicitud queda registrada con ticket, permitiendo seguimiento y métricas de atención." },
+        { title: "Canalización inteligente", description: "Las solicitudes llegan directamente a la dirección correcta (Obras Públicas, Agua, Catastro, etc.) sin pasos intermedios." },
+        { title: "Experiencia ciudadana mejorada", description: "El tono amigable y la rapidez de respuesta generan una percepción positiva del gobierno municipal." },
+        { title: "Escalabilidad", description: "El sistema puede manejar picos de demanda sin degradar el servicio, gracias al manejo de colas con Redis." }
       ]
     }
   },
   {
     id: 4,
-    title: "Sitio Web SaaS",
-    subtitle: "Plataforma de Servicios",
-    tags: ["Hero Section"],
-    image: "/assets/gebesa-card.png",
-     description: "Diseño y desarrollo de la sección Hero para una plataforma SaaS, optimizada para conversión y claridad en la propuesta de valor.",
-    date: "June, 2022",
-    role: "UI Engineer",
-    company: "SaaS Corp"
-  },
-  {
-    id: 5,
-    title: "Sitio Web de Viajes",
-    subtitle: "Plataforma de Reservas",
-    tags: ["Landing Page", "Responsivo"],
-    image: "/assets/n8n.png",
-    description: "Plataforma de viajes enfocada en experiencias locales y auténticas. Integración con APIs de mapas y reservas en tiempo real.",
-    date: "August, 2024",
-    role: "Lead Developer",
-    company: "Travel Tech"
-  },
-  {
-    id: 6,
-    title: "Sitio Web Responsivo Yardbook",
-    subtitle: "Adaptación Móvil",
-    tags: ["Sitio Web", "Dashboard"],
-    image: "/assets/simpatia.png",
-     description: "Adaptación completa de una plataforma de gestión de jardinería para dispositivos móviles, manteniendo la funcionalidad compleja del dashboard de escritorio.",
-    date: "November, 2023",
-    role: "Frontend Developer",
-    company: "Yardbook"
+    title: "Agentes Reda",
+    subtitle: "Ventas Inmobiliarias IA",
+    tags: ["n8n", "AI Sales", "WhatsApp"],
+    image: "/assets/n8n_agentes_reda.webp",
+    description: "Desarrollé un sistema de agentes inteligentes en n8n para Reda. El sistema automatiza la atención de prospectos vía WhatsApp, perfilando sus necesidades, recomendando propiedades y agendando citas con asesores humanos.",
+    date: "2025",
+    role: "Desarrollador n8n – Arquitectura de agentes IA e integraciones",
+    company: "Reda",
+    problem: {
+      title: "Problema",
+      points: [
+        { title: "Pérdida de Oportunidades y Leads sin Perfilar", description: "Reda genera cientos de prospectos inmobiliarios diariamente a través de campañas en redes sociales y su página web. Los asesores humanos no podían responder de inmediato a todos los mensajes de WhatsApp, perdiendo oportunidades de venta en los primeros minutos críticos. Además, muchos prospectos llegaban sin perfilar, lo que hacía que los asesores invirtieran tiempo en personas que no calificaban o no tenían claridad sobre lo que buscaban. Se necesitaba un sistema que respondiera al instante, calificara prospectos y solo escalara los casos listos para cerrar." }
+      ]
+    },
+    solution: {
+      title: "Solución",
+      points: [
+        { title: "Agente de Ventas Conversacional", description: "Diseñé un agente de IA que actúa como asesor de ventas personalizado. El nombre del asesor es dinámico según el proyecto, creando una experiencia de marca consistente. El agente mantiene un tono amigable y profesional, evitando modismos excesivos pero usando emojis para humanizar la conversación." },
+        { title: "Perfilamiento Inteligente de Prospectos", description: "El sistema identifica la necesidad real del prospecto a través de preguntas naturales: qué busca, para qué lo necesita, cuántas recámaras, presupuesto aproximado, zona de preferencia y urgencia de compra. Toda esta información se captura sin que el prospecto sienta que está llenando un formulario." },
+        { title: "Recomendación de Propiedades con Match", description: "Con base en el perfil capturado, el agente consulta el inventario disponible y recomienda hasta 3 unidades específicas (lote, modelo, proyecto) con un porcentaje de compatibilidad. Solo muestra opciones que realmente existen en el inventario actualizado." },
+        { title: "Procesamiento Multimodal", description: "El sistema acepta mensajes de texto, audios e imágenes. Los audios se transcriben automáticamente, permitiendo que los prospectos hablen naturalmente sobre lo que buscan sin tener que escribir." },
+        { title: "Memoria Conversacional", description: "Cada conversación mantiene contexto completo con PostgreSQL. Si un prospecto regresa días después, el agente recuerda su perfil, preferencias y en qué punto quedó la conversación." },
+        { title: "Gestión de Citas Automatizada", description: "Cuando el prospecto está listo, el agente verifica disponibilidad real de horarios y agenda la cita directamente, notificando al asesor humano asignado." },
+        { title: "Sistema de Concurrencia", description: "Implementé manejo de múltiples mensajes simultáneos con Redis, procesando conversaciones en orden y evitando respuestas duplicadas cuando el prospecto envía varios mensajes seguidos." }
+      ]
+    },
+    result: {
+      title: "Resultado",
+      points: [
+        { title: "Respuesta instantánea 24/7", description: "Los prospectos reciben atención inmediata sin importar el horario, capturando el interés en el momento de mayor intención." },
+        { title: "Prospectos pre-calificados", description: "Los asesores humanos solo reciben prospectos ya perfilados con información de necesidades, presupuesto y preferencias." },
+        { title: "Mayor conversión", description: "Al recomendar propiedades específicas con alto match, los prospectos llegan a las citas con opciones concretas que les interesan." },
+        { title: "Reactivación de bases frías", description: "El sistema puede contactar bases de datos antiguas y re-perfilar prospectos que no se cerraron anteriormente." },
+        { title: "Escalabilidad sin perder personalización", description: "El agente mantiene conversaciones naturales y personalizadas aunque atienda cientos de prospectos simultáneamente." },
+        { title: "Reducción de carga operativa", description: "Los asesores se enfocan en cerrar ventas en lugar de responder preguntas básicas o perfilar desde cero." }
+      ]
+    }
   }
 ];

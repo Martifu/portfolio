@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Dribbble, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Dribbble, Twitter, Linkedin, Instagram, FileUser } from "lucide-react";
 import { BlackButton } from "./BlackButton";
 
 export const Hero = () => {
@@ -122,11 +122,11 @@ export const Hero = () => {
                     {/* Project Cards (Behind) - Fanned out */}
                     <div className="absolute top-[70px] sm:top-[80px] md:top-[40px] lg:top-[-40px] xl:top-[-80px] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0 flex justify-center items-start scale-[0.6] sm:scale-[0.7] md:scale-80 lg:scale-90 xl:scale-100 origin-top">
                         {[
-                            { title: "Simpatía CRM", x: -160, y: 70, rotate: -20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/simpatia.png" },
-                            { title: "Gebesa Desk App", x: -120, y: 25, rotate: -8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/gebesa-card.png" },
-                            { title: "Reda CRM", x: 0, y: -5, rotate: 0, delay: 0.2, z: 20, isCenter: true, opacity: 1, image: "/assets/reda-crm.png" },
-                            { title: "Aplicación Móvil Reda", x: 160, y: 25, rotate: 8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/ai-card.png" },
-                            { title: "Agentes IA", x: 190, y: 70, rotate: 20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/n8n.png" },
+                            { title: "Simpatía CRM", x: -160, y: 70, rotate: -20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/simpatia.webp" },
+                            { title: "Gebesa Desk App", x: -120, y: 25, rotate: -8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/gebesa-card.webp" },
+                            { title: "Reda CRM", x: 0, y: -5, rotate: 0, delay: 0.2, z: 20, isCenter: true, opacity: 1, image: "/assets/reda-crm.webp" },
+                            { title: "Aplicación Móvil Reda", x: 160, y: 25, rotate: 8, delay: 0.4, z: 10, opacity: 0.8, image: "/assets/ai-card.webp" },
+                            { title: "Agentes IA", x: 190, y: 70, rotate: 20, delay: 0.6, z: 0, opacity: 0.5, image: "/assets/n8n_agentes_reda.png" },
                         ].map((card, index) => (
                             <motion.div
                                 key={index}
@@ -139,7 +139,7 @@ export const Hero = () => {
                                 {/* Card Image Area - Removed explicit image for center card to match request */}
                                 <div className="relative border border-gray-200 w-full h-56 bg-white rounded-[10px] overflow-hidden shadow-inner mb-1 group-hover:scale-[1.02] transition-transform">
                                     <Image
-                                        src={card.image || "/assets/card-image.png"}
+                                        src={card.image?.replace('.png', '.webp') || "/assets/card-image.png"}
                                         alt={card.title}
                                         fill
                                         className="opacity-90 object-cover"
@@ -179,7 +179,7 @@ export const Hero = () => {
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     >
                         <Image
-                            src="/assets/me.png"
+                            src="/assets/me.webp"
                             alt="Martin Esparza"
                             fill
                             className="object-contain drop-shadow-2xl"
@@ -238,12 +238,12 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
                     className="mt-8 sm:mt-5 md:mt-6 flex flex-row items-center justify-center gap-3 sm:gap-3 w-full px-1"
                 >
-                    <div className="flex-shrink-0 w-auto">
+                    <a href="mailto:martin0013esp@gmail.com" className="flex-shrink-0 w-auto">
                         <BlackButton className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm md:text-base cursor-pointer">Trabajemos Juntos</BlackButton>
-                    </div>
-                    <button className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
-                        <BriefcaseIcon /> Agendar Llamada
-                    </button>
+                    </a>
+                    <a href="/assets/Martin Esparza CV.pdf" target="_blank" rel="noopener noreferrer" className="w-auto whitespace-nowrap px-4 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 shadow-sm flex-shrink-0 cursor-pointer">
+                        <FileUser size={18} /> Mi CV
+                    </a>
                 </motion.div>
 
                 {/* Social Icons */}
