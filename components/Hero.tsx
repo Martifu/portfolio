@@ -184,6 +184,7 @@ export const Hero = () => {
                             fill
                             className="object-contain drop-shadow-2xl"
                             priority
+                            fetchPriority="high"
                         />
                         {/* White Gradient Overlay at Bottom */}
                         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/60 to-transparent z-40 pointer-events-none" />
@@ -230,7 +231,7 @@ export const Hero = () => {
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
                     className="mt-6 sm:mt-2.5 md:mt-3 text-sm sm:text-sm md:text-base text-gray-500 max-w-xl font-light px-6 sm:px-8 leading-relaxed"
                 >
-                    Hola, soy Martin, Desarrollador de Software con 3 años de experiencia ayudando a marcas y negocios a construir productos digitales robustos y escalables.
+                    Hola, soy Martin, Desarrollador de Software con más de 5 años de experiencia ayudando a marcas y negocios a construir productos digitales robustos y escalables.
                 </motion.p>
 
                 {/* Buttons */}

@@ -143,7 +143,7 @@ export const AboutMe = () => {
                 className="max-w-2xl px-6 text-center space-y-6 relative z-10 font-sans"
             >
                 <p className="text-gray-600 text-lg leading-relaxed">
-                    Soy Martin, un desarrollador Web y Móvil especializado en crear aplicaciones limpias e intuitivas con Flutter. Con 3 años de experiencia, ayudo a las marcas a convertir ideas en interfaces que realmente funcionan: guiando a los usuarios, creando fluidez y mejorando la conversión.
+                    Soy Martin, un desarrollador Web y Móvil especializado en crear aplicaciones limpias e intuitivas con Flutter. Con más de 5 años de experiencia, ayudo a las marcas a convertir ideas en interfaces que realmente funcionan: guiando a los usuarios, creando fluidez y mejorando la conversión.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
                     Para mí, el buen desarrollo es como un buen anfitrión: hace que las personas se sientan bienvenidas, sepan a dónde ir y quieran quedarse más tiempo.

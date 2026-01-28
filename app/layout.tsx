@@ -46,6 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preload" as="image" href="/assets/me.webp" fetchPriority="high" />
+      </head>
       <body className={`${outfit.variable} ${playfair.variable} ${dancing.variable} ${cormorant.variable} ${caveat.variable} ${garamond.variable} font-sans`}>{children}</body>
     </html>
   );
