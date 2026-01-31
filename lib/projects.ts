@@ -32,6 +32,8 @@ export interface Project {
   };
 
   gallery?: string[];
+  playStoreUrl?: string;
+  appStoreUrl?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -84,7 +86,9 @@ export const PROJECTS: Project[] = [
       "/assets/reda-crm-gallery-1.webp",
       "/assets/reda-crm-gallery-2.webp",
       "/assets/reda-crm-gallery-3.webp"
-    ]
+    ],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.reda.crm&pcampaignid=web_share",
+    appStoreUrl: "https://apps.apple.com/mx/app/reda-crm/id6483539128"
   },
   {
     id: 2,
@@ -132,7 +136,9 @@ export const PROJECTS: Project[] = [
       "/assets/gebesa-gallery-1.webp",
       "/assets/gebesa-gallery-2.webp",
       "/assets/gebesa-gallery-3.webp"
-    ]
+    ],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=app.gebesa.controller&pcampaignid=web_share",
+    appStoreUrl: "https://apps.apple.com/mx/app/gebesa-ia/id6739783672"
   },
   {
     id: 3,
@@ -211,5 +217,51 @@ export const PROJECTS: Project[] = [
         { title: "Reducción de carga operativa", description: "Los asesores se enfocan en cerrar ventas en lugar de responder preguntas básicas o perfilar desde cero." }
       ]
     }
+  },
+  {
+    id: 5,
+    title: "Simpatía CRM",
+    subtitle: "Gestión de Atención Ciudadana",
+    tags: ["React", "WhatsApp API", "PostgreSQL"],
+    image: "/assets/simpatia-crm-gallery-1.png",
+    description: "Desarrollé un sistema CRM para el Gobierno de Gómez Palacio, Durango, que centraliza la gestión de solicitudes ciudadanas. El sistema recibe y administra tickets generados automáticamente por el agente de IA, asignándolos a las direcciones municipales correspondientes como SIDEAPA, Arte y Cultura, DIF, Obras Públicas y más.",
+    date: "2025",
+    role: "Desarrollador Full Stack – CRM e integraciones",
+    company: "Simpatía / Gobierno de Gómez Palacio",
+    problem: {
+      title: "Problema",
+      points: [
+        { title: "Desorganización de Solicitudes", description: "El gobierno municipal recibía cientos de tickets generados por el agente de IA 'La Vaquerita', pero no existía un sistema centralizado para administrarlos, asignarlos y darles seguimiento. Los tickets se acumulaban sin clasificación clara y no había forma de saber qué dirección debía atender cada caso." },
+        { title: "Falta de Visibilidad y Control", description: "Las diferentes direcciones municipales (SIDEAPA, DIF, Arte y Cultura, etc.) no tenían visibilidad sobre los reportes asignados a ellas. No había métricas de atención, tiempos de respuesta ni historial de gestión." },
+        { title: "Comunicación Fragmentada", description: "Los funcionarios necesitaban comunicarse con los ciudadanos para dar seguimiento, pero no existía un canal integrado que mantuviera el contexto de la conversación original iniciada por el agente de IA." },
+        { title: "Ausencia de Trazabilidad", description: "No se podía rastrear el ciclo completo de una solicitud: desde su creación por el agente de IA, pasando por la asignación a una dirección, hasta su resolución final." }
+      ]
+    },
+    solution: {
+      title: "Solución",
+      points: [
+        { title: "CRM Centralizado Multi-Direccional", description: "Construí un sistema web que recibe automáticamente todos los tickets generados por el agente de IA y los organiza en un dashboard central. Cada dirección municipal tiene acceso a sus tickets asignados con filtros por estado, prioridad y tipo de solicitud." },
+        { title: "Sistema de Asignación Inteligente", description: "Implementé lógica de clasificación automática que asigna cada ticket a la dirección correspondiente según el tipo de reporte: fugas de agua a SIDEAPA, solicitudes de apoyo social al DIF, eventos culturales a Arte y Cultura, baches a Obras Públicas, etc." },
+        { title: "Integración WhatsApp para Seguimiento", description: "El CRM permite a los funcionarios responder directamente desde la plataforma, manteniendo la conversación en el mismo hilo de WhatsApp donde el ciudadano inició el reporte con el agente de IA. Esto asegura continuidad y contexto completo." },
+        { title: "Panel de Control y Métricas", description: "Desarrollé dashboards personalizados para cada dirección con métricas de atención: tickets pendientes, resueltos, tiempos promedio de respuesta y tendencias de solicitudes." },
+        { title: "Gestión de Estados y Prioridades", description: "Los funcionarios pueden actualizar el estado de cada ticket (nuevo, en proceso, resuelto, cancelado) y asignar niveles de prioridad. El sistema envía notificaciones automáticas cuando un ticket requiere atención urgente." },
+        { title: "Base de Datos PostgreSQL con Historial Completo", description: "Toda la información de tickets, conversaciones, asignaciones y resoluciones queda almacenada de forma estructurada, permitiendo auditorías, reportes históricos y análisis de tendencias." }
+      ]
+    },
+    result: {
+      title: "Resultado",
+      points: [
+        { title: "Centralización y Organización", description: "Todas las solicitudes ciudadanas fluyen automáticamente desde el agente de IA al CRM, eliminando puntos ciegos y pérdida de información." },
+        { title: "Asignación Automática y Eficiente", description: "Cada dirección municipal recibe únicamente los tickets de su competencia, reduciendo confusión y acelerando tiempos de atención." },
+        { title: "Trazabilidad Completa", description: "Desde la creación del ticket por la IA hasta su cierre, todo el ciclo queda documentado con timestamps, responsables y acciones realizadas." },
+        { title: "Mejora en Tiempos de Respuesta", description: "Los funcionarios pueden priorizar casos urgentes y responder directamente desde el CRM sin cambiar de plataforma, acelerando la atención ciudadana." },
+        { title: "Métricas y Rendición de Cuentas", description: "Las direcciones municipales tienen visibilidad clara de su desempeño con indicadores cuantitativos de eficiencia en atención ciudadana." },
+        { title: "Escalabilidad y Extensibilidad", description: "El sistema puede integrarse con nuevos canales de comunicación, agregar más direcciones municipales o ampliar funcionalidades según las necesidades del gobierno." }
+      ]
+    },
+    gallery: [
+      "/assets/simpatia-crm-gallery-2.png",
+      "/assets/simpatia-crm-gallery-3.png"
+    ]
   }
 ];
